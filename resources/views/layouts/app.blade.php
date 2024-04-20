@@ -24,7 +24,7 @@
     />
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-neutral-800">
+<body class="bg-neutral-200">
 <div class="relative h-full isolate overflow-hidden  px-6 lg:px-8">
     <header>
         @include('layouts.nav')
