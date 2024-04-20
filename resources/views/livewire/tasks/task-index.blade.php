@@ -19,8 +19,9 @@
       </div>
     </div>
     @foreach($tasks as $task)
-
+    <a href="/tasks/{{$task->id}}" class="list-group-item list-group-item-action">
         <x-task-item :task="$task" />
+      </a>
 
     @endforeach
 

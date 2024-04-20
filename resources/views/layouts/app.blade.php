@@ -29,7 +29,7 @@
     <header>
         @include('layouts.nav')
     </header>
-    <div class="relative isolate pt-24 sm:pt-32">
+    <div class="relative isolate pt-10 sm:pt-10">
         <div class="mx-auto">
             @yield('content')
             @isset($slot)
