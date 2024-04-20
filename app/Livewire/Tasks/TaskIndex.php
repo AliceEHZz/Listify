@@ -35,6 +35,13 @@ class TaskIndex extends Component
         return $this->redirect(route('tasks')); // in web.php we have named the route "/" as 'tasks'
     }
 
+    public function removeTaskItem(int $id)
+    {
+        Task::where('id', $id)->delete();
+        session()->flash('message', 'Task item removed successfully.');
+        return $this->redirect(route('tasks'));
+    }
+
     public function render()
     {
         return view('livewire.tasks.task-index')->title('Task List')->with([

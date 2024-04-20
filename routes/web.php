@@ -14,15 +14,5 @@ Route::get('/', function () {
 Route::get('/tasks', TaskIndex::class)->name('tasks');
 
 Route::get('/tasks/create', TaskCreate::class);
-Route::get('/tasks/update', TaskUpdate::class);
 Route::get('/tasks/{task}',TaskShow::class);
 
-// Route::post('/tasks', function(){
-//     $data = request()->validate([
-//         'name' => 'required',
-//     ]);
-
-//     Task::create($data);
-
-//     return redirect('/tasks');
-// });

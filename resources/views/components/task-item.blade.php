@@ -5,11 +5,13 @@
                 {{ $task->name }} / {{Carbon\Carbon::parse($task->updated_at)->format('Y-m-d H:i')}}
             </p>
             
-            <p class="mt-2 text-md md:ml-6 md:mt-0">
-                <a href="/" class="whitespace-nowrap font-medium text-pink-700 hover:text-pink-600">
-                    <i class="fa-solid fa-trash"></i>
-                </a>
-            </p>
+            <div class="mt-2 text-md md:ml-6 md:mt-0">
+                <button type="button" wire:click="removeTaskItem({{ $task->id }})" class="whitespace-nowrap font-medium text-pink-700 hover:text-pink-600">
+                    <span wire:loading.remove wire:target="removeTaskItem({{ $task->id }})"><i class="fa-solid fa-trash"></i> Remove</span>
+                    <span wire:loading wire:target="removeTaskItem({{ $task->id }})"> Removing</span>
+                </button>
+            </div>
+            
         </div>
     </div>
 </div>
